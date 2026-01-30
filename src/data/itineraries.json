@@ -1,0 +1,537 @@
+{
+  "profiles": {
+    "family": {
+      "name": "Família",
+      "description": "Ideal para viagens com crianças",
+      "icon": "👨‍👩‍👧‍👦",
+      "preferences": {
+        "paceLevel": "relaxed",
+        "activityTypes": ["parks", "museums", "shows", "nature"],
+        "mealStyle": "casual",
+        "transportPreference": "comfortable",
+        "budgetFocus": "balanced"
+      }
+    },
+    "luxury": {
+      "name": "Luxo",
+      "description": "Experiências premium e exclusivas",
+      "icon": "✨",
+      "preferences": {
+        "paceLevel": "relaxed",
+        "activityTypes": ["fine-dining", "spa", "private-tours", "exclusive"],
+        "mealStyle": "gourmet",
+        "transportPreference": "private",
+        "budgetFocus": "experience"
+      }
+    },
+    "adventure": {
+      "name": "Aventura",
+      "description": "Para quem busca adrenalina",
+      "icon": "🏔️",
+      "preferences": {
+        "paceLevel": "active",
+        "activityTypes": ["hiking", "sports", "nature", "extreme"],
+        "mealStyle": "local",
+        "transportPreference": "flexible",
+        "budgetFocus": "activities"
+      }
+    },
+    "budget": {
+      "name": "Econômico",
+      "description": "Máximo com mínimo custo",
+      "icon": "💰",
+      "preferences": {
+        "paceLevel": "active",
+        "activityTypes": ["free-attractions", "walking-tours", "local-markets"],
+        "mealStyle": "street-food",
+        "transportPreference": "public",
+        "budgetFocus": "savings"
+      }
+    },
+    "romantic": {
+      "name": "Romântico",
+      "description": "Perfeito para casais",
+      "icon": "💕",
+      "preferences": {
+        "paceLevel": "relaxed",
+        "activityTypes": ["sunset-views", "fine-dining", "couples-experiences"],
+        "mealStyle": "romantic",
+        "transportPreference": "scenic",
+        "budgetFocus": "experience"
+      }
+    },
+    "cultural": {
+      "name": "Cultural",
+      "description": "Imersão em arte e história",
+      "icon": "🎭",
+      "preferences": {
+        "paceLevel": "moderate",
+        "activityTypes": ["museums", "historical-sites", "theaters", "galleries"],
+        "mealStyle": "traditional",
+        "transportPreference": "walking",
+        "budgetFocus": "balanced"
+      }
+    }
+  },
+  "itineraries": {
+    "paris-romantic-7d": {
+      "id": "paris-romantic-7d",
+      "destination": "paris",
+      "profile": "romantic",
+      "duration": 7,
+      "title": "Paris dos Apaixonados",
+      "description": "Uma semana mágica na Cidade Luz",
+      "totalBudget": {
+        "min": 12000,
+        "max": 18000,
+        "currency": "BRL"
+      },
+      "days": [
+        {
+          "day": 1,
+          "theme": "Chegada & Aclimatação",
+          "jetLagProtocol": true,
+          "activities": [
+            {
+              "id": "p1-1",
+              "time": "14:00",
+              "name": "Check-in no Hotel Le Marais",
+              "type": "accommodation",
+              "duration": "1h",
+              "price": 0,
+              "notes": "Descanse após o voo",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p1-2",
+              "time": "16:00",
+              "name": "Passeio leve pelo Marais",
+              "type": "walking",
+              "duration": "2h",
+              "price": 0,
+              "notes": "Caminhada leve para combater jet lag",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p1-3",
+              "time": "19:00",
+              "name": "Jantar no Café de Flore",
+              "type": "dining",
+              "duration": "2h",
+              "price": 180,
+              "notes": "Clássico parisiense",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "theme": "Torre Eiffel & Sena",
+          "jetLagProtocol": true,
+          "activities": [
+            {
+              "id": "p2-1",
+              "time": "10:00",
+              "name": "Café da manhã no hotel",
+              "type": "dining",
+              "duration": "1h",
+              "price": 0,
+              "notes": "Início tardio - adaptação ao fuso",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p2-2",
+              "time": "11:30",
+              "name": "Jardins do Trocadéro",
+              "type": "sightseeing",
+              "duration": "1h",
+              "price": 0,
+              "notes": "Melhor vista da Torre Eiffel",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p2-3",
+              "time": "14:00",
+              "name": "Almoço em Bistrô local",
+              "type": "dining",
+              "duration": "1.5h",
+              "price": 120,
+              "notes": "Sugestão: Le Petit Cler",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p2-4",
+              "time": "17:00",
+              "name": "Torre Eiffel - Pôr do Sol",
+              "type": "attraction",
+              "duration": "2h",
+              "price": 180,
+              "notes": "Subida ao 2º andar, horário do sunset",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p2-5",
+              "time": "20:00",
+              "name": "Cruzeiro romântico no Sena",
+              "type": "experience",
+              "duration": "2h",
+              "price": 240,
+              "notes": "Com champagne",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "theme": "Arte & Cultura",
+          "jetLagProtocol": false,
+          "activities": [
+            {
+              "id": "p3-1",
+              "time": "09:00",
+              "name": "Museu do Louvre",
+              "type": "museum",
+              "duration": "4h",
+              "price": 95,
+              "notes": "Entrada pela Pirâmide Invertida (menos fila)",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p3-2",
+              "time": "13:30",
+              "name": "Almoço no Café Marly",
+              "type": "dining",
+              "duration": "1.5h",
+              "price": 150,
+              "notes": "Vista para a Pirâmide do Louvre",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p3-3",
+              "time": "15:30",
+              "name": "Jardins des Tuileries",
+              "type": "walking",
+              "duration": "1.5h",
+              "price": 0,
+              "notes": "Caminhada romântica",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p3-4",
+              "time": "17:30",
+              "name": "Musée de l'Orangerie",
+              "type": "museum",
+              "duration": "1.5h",
+              "price": 65,
+              "notes": "Nenúfares de Monet",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p3-5",
+              "time": "20:00",
+              "name": "Jantar em Saint-Germain",
+              "type": "dining",
+              "duration": "2.5h",
+              "price": 280,
+              "notes": "Sugestão: Le Comptoir du Panthéon",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "theme": "Montmartre & Sacré-Cœur",
+          "jetLagProtocol": false,
+          "activities": [
+            {
+              "id": "p4-1",
+              "time": "09:30",
+              "name": "Café em Montmartre",
+              "type": "dining",
+              "duration": "1h",
+              "price": 40,
+              "notes": "Amélie Poulain vibes",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p4-2",
+              "time": "11:00",
+              "name": "Sacré-Cœur",
+              "type": "sightseeing",
+              "duration": "1.5h",
+              "price": 0,
+              "notes": "Vista panorâmica gratuita",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p4-3",
+              "time": "13:00",
+              "name": "Place du Tertre - Artistas",
+              "type": "experience",
+              "duration": "1h",
+              "price": 80,
+              "notes": "Retrato do casal",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p4-4",
+              "time": "15:00",
+              "name": "Mur des Je t'aime",
+              "type": "sightseeing",
+              "duration": "30min",
+              "price": 0,
+              "notes": "Muro do 'Eu te amo' em 300 idiomas",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p4-5",
+              "time": "19:00",
+              "name": "Moulin Rouge Show",
+              "type": "entertainment",
+              "duration": "3h",
+              "price": 450,
+              "notes": "Inclui champagne",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "theme": "Versalhes",
+          "jetLagProtocol": false,
+          "activities": [
+            {
+              "id": "p5-1",
+              "time": "08:30",
+              "name": "Trem para Versalhes",
+              "type": "transport",
+              "duration": "45min",
+              "price": 30,
+              "notes": "RER C - Saída Gare d'Austerlitz",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p5-2",
+              "time": "10:00",
+              "name": "Palácio de Versalhes",
+              "type": "attraction",
+              "duration": "4h",
+              "price": 180,
+              "notes": "Audioguia incluído",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p5-3",
+              "time": "14:30",
+              "name": "Almoço em Versalhes",
+              "type": "dining",
+              "duration": "1.5h",
+              "price": 100,
+              "notes": "La Petite Venise nos jardins",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p5-4",
+              "time": "16:00",
+              "name": "Jardins e Petit Trianon",
+              "type": "walking",
+              "duration": "2.5h",
+              "price": 0,
+              "notes": "Passeio de barco opcional (+€15)",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p5-5",
+              "time": "20:00",
+              "name": "Jantar no Marais",
+              "type": "dining",
+              "duration": "2h",
+              "price": 200,
+              "notes": "Retorno a Paris",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "theme": "Compras & Champs-Élysées",
+          "jetLagProtocol": false,
+          "activities": [
+            {
+              "id": "p6-1",
+              "time": "10:00",
+              "name": "Galeries Lafayette",
+              "type": "shopping",
+              "duration": "2h",
+              "price": 0,
+              "notes": "Vista gratuita do terraço",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p6-2",
+              "time": "12:30",
+              "name": "Almoço em Printemps",
+              "type": "dining",
+              "duration": "1.5h",
+              "price": 120,
+              "notes": "Terraço com vista",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p6-3",
+              "time": "14:30",
+              "name": "Champs-Élysées",
+              "type": "walking",
+              "duration": "2h",
+              "price": 0,
+              "notes": "Passeio e compras",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p6-4",
+              "time": "17:00",
+              "name": "Arco do Triunfo",
+              "type": "attraction",
+              "duration": "1h",
+              "price": 65,
+              "notes": "Subida ao topo",
+              "auctionEnabled": true
+            },
+            {
+              "id": "p6-5",
+              "time": "20:00",
+              "name": "Jantar de despedida",
+              "type": "dining",
+              "duration": "3h",
+              "price": 350,
+              "notes": "Restaurante com estrela Michelin",
+              "auctionEnabled": true
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "theme": "Partida",
+          "jetLagProtocol": false,
+          "activities": [
+            {
+              "id": "p7-1",
+              "time": "08:00",
+              "name": "Último café parisiense",
+              "type": "dining",
+              "duration": "1h",
+              "price": 40,
+              "notes": "Croissant e café",
+              "auctionEnabled": false
+            },
+            {
+              "id": "p7-2",
+              "time": "09:30",
+              "name": "Check-out e transfer",
+              "type": "transport",
+              "duration": "1.5h",
+              "price": 80,
+              "notes": "Transfer privado ao aeroporto",
+              "auctionEnabled": true
+            }
+          ]
+        }
+      ]
+    },
+    "tokyo-cultural-10d": {
+      "id": "tokyo-cultural-10d",
+      "destination": "tokyo",
+      "profile": "cultural",
+      "duration": 10,
+      "title": "Imersão no Japão",
+      "description": "Da tradição à modernidade em 10 dias",
+      "totalBudget": {
+        "min": 18000,
+        "max": 25000,
+        "currency": "BRL"
+      },
+      "days": [
+        {
+          "day": 1,
+          "theme": "Chegada em Tóquio",
+          "jetLagProtocol": true,
+          "activities": [
+            {
+              "id": "t1-1",
+              "time": "15:00",
+              "name": "Check-in em Shinjuku",
+              "type": "accommodation",
+              "duration": "1h",
+              "price": 0,
+              "notes": "Descanso após voo longo",
+              "auctionEnabled": false
+            },
+            {
+              "id": "t1-2",
+              "time": "18:00",
+              "name": "Ramen no Ichiran",
+              "type": "dining",
+              "duration": "1h",
+              "price": 50,
+              "notes": "Experiência solo ramen",
+              "auctionEnabled": false
+            },
+            {
+              "id": "t1-3",
+              "time": "20:00",
+              "name": "Shibuya Crossing noturno",
+              "type": "sightseeing",
+              "duration": "1h",
+              "price": 0,
+              "notes": "Ver o cruzamento mais famoso do mundo",
+              "auctionEnabled": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activityTemplates": {
+    "paris": {
+      "mustSee": [
+        { "name": "Torre Eiffel", "avgPrice": 180, "avgDuration": "2h", "type": "attraction" },
+        { "name": "Museu do Louvre", "avgPrice": 95, "avgDuration": "4h", "type": "museum" },
+        { "name": "Sacré-Cœur", "avgPrice": 0, "avgDuration": "1.5h", "type": "sightseeing" },
+        { "name": "Arco do Triunfo", "avgPrice": 65, "avgDuration": "1h", "type": "attraction" },
+        { "name": "Notre-Dame", "avgPrice": 0, "avgDuration": "1h", "type": "sightseeing" }
+      ],
+      "romantic": [
+        { "name": "Cruzeiro no Sena", "avgPrice": 120, "avgDuration": "2h", "type": "experience" },
+        { "name": "Moulin Rouge", "avgPrice": 450, "avgDuration": "3h", "type": "entertainment" },
+        { "name": "Pont des Arts", "avgPrice": 0, "avgDuration": "30min", "type": "sightseeing" }
+      ],
+      "cultural": [
+        { "name": "Musée d'Orsay", "avgPrice": 75, "avgDuration": "3h", "type": "museum" },
+        { "name": "Centre Pompidou", "avgPrice": 75, "avgDuration": "2.5h", "type": "museum" },
+        { "name": "Palácio de Versalhes", "avgPrice": 180, "avgDuration": "6h", "type": "daytrip" }
+      ],
+      "foodie": [
+        { "name": "Tour gastronômico Marais", "avgPrice": 150, "avgDuration": "3h", "type": "tour" },
+        { "name": "Aula de cozinha francesa", "avgPrice": 200, "avgDuration": "3h", "type": "experience" }
+      ]
+    },
+    "tokyo": {
+      "mustSee": [
+        { "name": "Templo Senso-ji", "avgPrice": 0, "avgDuration": "2h", "type": "temple" },
+        { "name": "Shibuya Crossing", "avgPrice": 0, "avgDuration": "1h", "type": "sightseeing" },
+        { "name": "Tokyo Skytree", "avgPrice": 100, "avgDuration": "2h", "type": "attraction" },
+        { "name": "Meiji Shrine", "avgPrice": 0, "avgDuration": "1.5h", "type": "temple" }
+      ],
+      "cultural": [
+        { "name": "Cerimônia do Chá", "avgPrice": 150, "avgDuration": "2h", "type": "experience" },
+        { "name": "Museu Nacional de Tóquio", "avgPrice": 40, "avgDuration": "3h", "type": "museum" },
+        { "name": "Kabuki Theater", "avgPrice": 200, "avgDuration": "3h", "type": "entertainment" }
+      ],
+      "modern": [
+        { "name": "Akihabara", "avgPrice": 0, "avgDuration": "3h", "type": "district" },
+        { "name": "TeamLab Borderless", "avgPrice": 150, "avgDuration": "3h", "type": "museum" },
+        { "name": "Robot Restaurant", "avgPrice": 300, "avgDuration": "2h", "type": "entertainment" }
+      ]
+    }
+  }
+}

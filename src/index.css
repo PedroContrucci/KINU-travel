@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === KINU HORIZONTE VIVO - Global Styles === */
+
+:root {
+  --kinu-night: #0F172A;
+  --kinu-deep: #1E293B;
+  --kinu-surface: #334155;
+  --kinu-emerald: #10B981;
+  --kinu-emerald-light: #6EE7B7;
+  --kinu-horizon: #0EA5E9;
+  --kinu-gold: #EAB308;
+  --kinu-white: #F8FAFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: var(--kinu-night);
+  color: var(--kinu-white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kinu-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kinu-surface);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kinu-emerald);
+}
+
+/* === GLASSMORPHISM === */
+@layer components {
+  .glass {
+    @apply bg-kinu-deep/80 backdrop-blur-kinu border border-kinu-surface/50;
+  }
+  
+  .glass-card {
+    @apply bg-kinu-deep/90 backdrop-blur-kinu border border-kinu-surface/50 rounded-kinu-lg;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-gold {
+    @apply bg-kinu-gold/10 backdrop-blur-kinu border border-kinu-gold/30;
+  }
+  
+  /* Silk Button */
+  .btn-silk {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    @apply bg-gradient-to-r from-kinu-emerald to-kinu-horizon;
+    @apply hover:shadow-kinu-lg hover:scale-105;
+    @apply active:scale-95;
+  }
+  
+  .btn-silk-outline {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    @apply border border-kinu-emerald text-kinu-emerald;
+    @apply hover:bg-kinu-emerald/10 hover:shadow-kinu;
+  }
+  
+  .btn-gold {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    @apply bg-gradient-to-r from-kinu-gold to-yellow-500 text-kinu-night;
+    @apply hover:shadow-gold hover:scale-105;
+    @apply active:scale-95;
+  }
+  
+  /* Input Styles */
+  .input-kinu {
+    @apply w-full px-4 py-3 rounded-kinu;
+    @apply bg-kinu-surface/50 border border-kinu-surface;
+    @apply text-kinu-white placeholder-kinu-gray-500;
+    @apply focus:outline-none focus:border-kinu-emerald focus:ring-2 focus:ring-kinu-emerald/20;
+    @apply transition-all duration-300;
+  }
+  
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300;
+    @apply hover:border-kinu-emerald/50 hover:shadow-kinu;
+    @apply hover:-translate-y-1;
+  }
+  
+  /* Gold Insight Badge */
+  .insight-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full;
+    @apply bg-kinu-gold/10 border border-kinu-gold/30;
+    @apply text-kinu-gold text-sm font-medium;
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+  
+  /* Section Tag */
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full;
+    @apply bg-kinu-emerald/10 border border-kinu-emerald/30;
+    @apply text-kinu-emerald text-sm font-semibold uppercase tracking-wider;
+  }
+}
+
+/* === ANIMATIONS === */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* === GRID BACKGROUND === */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* === GRADIENT OVERLAYS === */
+.gradient-radial {
+  background: radial-gradient(circle at 30% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
+}
+
+/* === CHAT BUBBLE === */
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--kinu-deep);
+}
+
+.chat-bubble-ai::before {
+  border-top-color: rgba(234, 179, 8, 0.2);
+}
+
+/* === 3D LUGGAGE EFFECT === */
+.luggage-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.luggage-face {
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
+
+/* === PROGRESS BAR === */
+.progress-kinu {
+  @apply h-2 rounded-full bg-kinu-surface overflow-hidden;
+}
+
+.progress-kinu-fill {
+  @apply h-full rounded-full transition-all duration-500;
+  background: linear-gradient(90deg, var(--kinu-emerald), var(--kinu-horizon));
+}
+
+/* === TOOLTIP === */
+.tooltip {
+  @apply invisible opacity-0 absolute z-50 px-3 py-2 text-sm;
+  @apply bg-kinu-deep border border-kinu-surface rounded-lg;
+  @apply transition-all duration-200;
+  transform: translateY(5px);
+}
+
+.tooltip-trigger:hover .tooltip {
+  @apply visible opacity-100;
+  transform: translateY(0);
+}
